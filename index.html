@@ -116,9 +116,6 @@ section { scroll-margin-top: 72px; }
 }
 .chip:hover { color: var(--ink); }
 .chip[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
-.sub-head { margin: clamp(8px, 1.5vw, 16px) 0 20px; display: grid; gap: 6px; }
-.sub-head h3 { font-size: clamp(22px, 2.4vw, 30px); }
-.grid + .sub-head { margin-top: clamp(36px, 5vw, 64px); }
 .grid { columns: 3 280px; column-gap: clamp(8px, 1.2vw, 16px); }
 .grid figure { margin: 0 0 clamp(18px, 2vw, 26px); break-inside: avoid; }
 .grid figcaption { margin-top: 7px; font-size: 13px; color: var(--muted); }
@@ -328,33 +325,23 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
       <h2>For hotels and resorts</h2>
       <p>Fresh, licensed photos for your website, social and email, shot in a single stay. Tap any image to view it larger.</p>
     </div>
-    <div class="sub-head">
-      <h3>One stay, one content library</h3>
-      <p class="label">Featured: a boutique hotel in Oakland. Rooms, lounge, restaurant and bar from one visit.</p>
-    </div>
-    <div class="grid" id="grid-feature">
-      <figure><button type="button" data-full="img/k1698.jpg" aria-label="View larger: Guest room with sheer curtains and desk by the window"><img src="img/k1698-s.jpg" alt="Guest room with sheer curtains and desk by the window" width="600" height="900" loading="lazy"></button><figcaption>Guest room</figcaption></figure>
-      <figure><button type="button" data-full="img/k1710.jpg" aria-label="View larger: Made bed with framed art above the headboard"><img src="img/k1710-s.jpg" alt="Made bed with framed art above the headboard" width="600" height="900" loading="lazy"></button><figcaption>Bed and headboard</figcaption></figure>
-      <figure><button type="button" data-full="img/k1877.jpg" aria-label="View larger: Upholstered chair and side table by a bright window"><img src="img/k1877-s.jpg" alt="Upholstered chair and side table by a bright window" width="600" height="900" loading="lazy"></button><figcaption>Reading corner</figcaption></figure>
-      <figure><button type="button" data-full="img/k1838.jpg" aria-label="View larger: Lounge with globe pendants and channel-tufted walls"><img src="img/k1838-s.jpg" alt="Lounge with globe pendants and channel-tufted walls" width="600" height="900" loading="lazy"></button><figcaption>Lounge</figcaption></figure>
-      <figure><button type="button" data-full="img/05.jpg" aria-label="View larger: Hotel café with patterned armchairs and tall windows"><img src="img/05-s.jpg" alt="Hotel café with patterned armchairs and tall windows" width="600" height="900" loading="lazy"></button><figcaption>Lobby restaurant</figcaption></figure>
-      <figure><button type="button" data-full="img/k1753.jpg" aria-label="View larger: Glass pendant lights in the lobby restaurant"><img src="img/k1753-s.jpg" alt="Glass pendant lights in the lobby restaurant" width="600" height="900" loading="lazy"></button><figcaption>Pendant lights, lobby restaurant</figcaption></figure>
-      <figure><button type="button" data-full="img/k1816.jpg" aria-label="View larger: Bar with leaf-patterned wall and pendant lights by the staircase"><img src="img/k1816-s.jpg" alt="Bar with leaf-patterned wall and pendant lights by the staircase" width="600" height="900" loading="lazy"></button><figcaption>Bar and staircase</figcaption></figure>
-      <figure><button type="button" data-full="img/k1815.jpg" aria-label="View larger: Back bar with bottles and warm shelf lighting"><img src="img/k1815-s.jpg" alt="Back bar with bottles and warm shelf lighting" width="900" height="600" loading="lazy"></button><figcaption>Back bar</figcaption></figure>
-    </div>
-    <div class="sub-head">
-      <h3>More stays</h3>
-      <p class="label">Rooms, pools, courtyards and guest amenities from other properties.</p>
-    </div>
     <div class="grid" id="grid-hotels">
       <figure><button type="button" data-full="img/10.jpg" aria-label="View larger: Courtyard sun loungers under a terracotta roof"><img src="img/10-s.jpg" alt="Courtyard sun loungers under a terracotta roof" width="600" height="900" loading="lazy"></button><figcaption>Courtyard, late afternoon</figcaption></figure>
-      <figure><button type="button" data-full="img/15.jpg" aria-label="View larger: Marble soaking tub by a shuttered window"><img src="img/15-s.jpg" alt="Marble soaking tub by a shuttered window" width="600" height="900" loading="lazy"></button><figcaption>Marble bath, evening</figcaption></figure>
+      <figure><button type="button" data-full="img/k1698.jpg" aria-label="View larger: Guest room with sheer curtains and desk by the window"><img src="img/k1698-s.jpg" alt="Guest room with sheer curtains and desk by the window" width="600" height="900" loading="lazy"></button><figcaption>Guest room</figcaption></figure>
       <figure><button type="button" data-full="img/03.jpg" aria-label="View larger: Garden pool seen from above through trees"><img src="img/03-s.jpg" alt="Garden pool seen from above through trees" width="675" height="900" loading="lazy"></button><figcaption>Garden pool from above</figcaption></figure>
+      <figure><button type="button" data-full="img/k1838.jpg" aria-label="View larger: Lounge with globe pendants and channel-tufted walls"><img src="img/k1838-s.jpg" alt="Lounge with globe pendants and channel-tufted walls" width="600" height="900" loading="lazy"></button><figcaption>Lounge</figcaption></figure>
+      <figure><button type="button" data-full="img/15.jpg" aria-label="View larger: Marble soaking tub by a shuttered window"><img src="img/15-s.jpg" alt="Marble soaking tub by a shuttered window" width="600" height="900" loading="lazy"></button><figcaption>Marble bath, evening</figcaption></figure>
+      <figure><button type="button" data-full="img/05.jpg" aria-label="View larger: Hotel café with patterned armchairs and tall windows"><img src="img/05-s.jpg" alt="Hotel café with patterned armchairs and tall windows" width="600" height="900" loading="lazy"></button><figcaption>Lobby restaurant</figcaption></figure>
+      <figure><button type="button" data-full="img/k1816.jpg" aria-label="View larger: Bar with leaf-patterned wall and pendant lights by the staircase"><img src="img/k1816-s.jpg" alt="Bar with leaf-patterned wall and pendant lights by the staircase" width="600" height="900" loading="lazy"></button><figcaption>Bar and staircase</figcaption></figure>
       <figure><button type="button" data-full="img/09.jpg" aria-label="View larger: White bed with monogrammed pillows"><img src="img/09-s.jpg" alt="White bed with monogrammed pillows" width="600" height="900" loading="lazy"></button><figcaption>Guest room</figcaption></figure>
       <figure><button type="button" data-full="img/08.jpg" aria-label="View larger: Pool surrounded by palms and garden"><img src="img/08-s.jpg" alt="Pool surrounded by palms and garden" width="533" height="799" loading="lazy"></button><figcaption>Pool garden</figcaption></figure>
-      <figure><button type="button" data-full="img/22.jpg" aria-label="View larger: Tiled courtyard with arched colonnade"><img src="img/22-s.jpg" alt="Tiled courtyard with arched colonnade" width="533" height="799" loading="lazy"></button><figcaption>Tiled courtyard</figcaption></figure>
+      <figure><button type="button" data-full="img/k1753.jpg" aria-label="View larger: Glass pendant lights in the lobby restaurant"><img src="img/k1753-s.jpg" alt="Glass pendant lights in the lobby restaurant" width="600" height="900" loading="lazy"></button><figcaption>Pendant lights, lobby restaurant</figcaption></figure>
       <figure><button type="button" data-full="img/23.jpg" aria-label="View larger: Iced coffee and espresso on a wooden tray"><img src="img/23-s.jpg" alt="Iced coffee and espresso on a wooden tray" width="600" height="900" loading="lazy"></button><figcaption>Coffee service</figcaption></figure>
+      <figure><button type="button" data-full="img/k1710.jpg" aria-label="View larger: Made bed with framed art above the headboard"><img src="img/k1710-s.jpg" alt="Made bed with framed art above the headboard" width="600" height="900" loading="lazy"></button><figcaption>Bed and headboard</figcaption></figure>
+      <figure><button type="button" data-full="img/22.jpg" aria-label="View larger: Tiled courtyard with arched colonnade"><img src="img/22-s.jpg" alt="Tiled courtyard with arched colonnade" width="533" height="799" loading="lazy"></button><figcaption>Tiled courtyard</figcaption></figure>
+      <figure><button type="button" data-full="img/k1877.jpg" aria-label="View larger: Upholstered chair and side table by a bright window"><img src="img/k1877-s.jpg" alt="Upholstered chair and side table by a bright window" width="600" height="900" loading="lazy"></button><figcaption>Reading corner</figcaption></figure>
       <figure><button type="button" data-full="img/06.jpg" aria-label="View larger: Welcome amenity on a side table beside an armchair"><img src="img/06-s.jpg" alt="Welcome amenity on a side table beside an armchair" width="533" height="799" loading="lazy"></button><figcaption>Welcome amenity</figcaption></figure>
+      <figure><button type="button" data-full="img/k1815.jpg" aria-label="View larger: Back bar with bottles and warm shelf lighting"><img src="img/k1815-s.jpg" alt="Back bar with bottles and warm shelf lighting" width="900" height="600" loading="lazy"></button><figcaption>Back bar</figcaption></figure>
     </div>
   </section>
 
