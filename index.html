@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>YNH Creative</title>
+<meta name="description" content="YNH Creative: hospitality and travel content creator making social-ready photo content for boutique hotels, resorts and tourism boards.">
+<link rel="canonical" href="https://ynhcreativelab.github.io/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232F4A3C'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23F6F5F2' text-anchor='middle'%3EY%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:title" content="YNH Creative">
+<meta property="og:description" content="YNH Creative: hospitality and travel content creator making social-ready photo content for boutique hotels, resorts and tourism boards.">
+<meta property="og:url" content="https://ynhcreativelab.github.io/">
+<meta property="og:image" content="https://ynhcreativelab.github.io/img/10.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<style>body{margin:0;background:#ECEAE6}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Hanken+Grotesk:wght@400;500;600&display=swap">
+<style>
+/* Layout: calm editorial on warm stone. One big photo up top, captioned galleries, plain serif headlines. */
+:root {
+  --bg: #ECEAE6;
+  --surface: #F6F5F2;
+  --ink: #1D211F;
+  --muted: #676B66;
+  --line: #D3D0CA;
+  --brass: #2F4A3C;
+  --on-photo: #FFFFFF;
+  --shade: rgba(12, 14, 13, .45);
+  --display: "Newsreader", Georgia, "Times New Roman", serif;
+  --body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --mono: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --gutter: clamp(16px, 4vw, 56px);
+  --max: 1320px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141615; --surface: #1C1F1E; --ink: #ECE9E3; --muted: #9B9D98;
+    --line: #2F3331; --brass: #9FBFAA; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141615; --surface: #1C1F1E; --ink: #ECE9E3; --muted: #9B9D98;
+  --line: #2F3331; --brass: #9FBFAA; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--bg); color: var(--ink);
+  font-family: var(--body); font-size: 16px; line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+.wrap { max-width: var(--max); margin-inline: auto; padding-inline: var(--gutter); }
+.label { font-size: 13px; color: var(--muted); }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; line-height: 1.06; letter-spacing: -.01em; }
+h2 { font-size: clamp(32px, 4.2vw, 52px); }
+p { margin: 0; }
+
+/* Header */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 14px; }
+.mark { font: 500 22px var(--display); text-decoration: none; white-space: nowrap; }
+.nav { display: flex; gap: clamp(14px, 2.4vw, 32px); flex-wrap: wrap; justify-content: flex-end; }
+.nav a { font-size: 14px; text-decoration: none; color: var(--muted); }
+.nav a:hover { color: var(--ink); }
+@media (max-width: 560px) { .nav a:not(.nav-cta) { display: none; } }
+.nav-cta { color: var(--ink) !important; border-bottom: 1px solid var(--brass); }
+
+/* Hero */
+.hero { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 7fr); gap: clamp(28px, 5vw, 72px); align-items: end; padding-block: clamp(40px, 7vw, 96px) clamp(48px, 7vw, 96px); }
+.hero h1 { font-size: clamp(40px, 5.6vw, 72px); margin-block: 16px 24px; }
+.hero .lede { font-size: 18px; max-width: 34ch; color: var(--muted); }
+.hero .cta-row { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; margin-top: 36px; }
+.btn {
+  display: inline-block; font: 500 14px/1 var(--body); letter-spacing: .04em;
+  background: var(--ink); color: var(--bg); padding: 15px 22px; text-decoration: none; border: 0; cursor: pointer;
+}
+.btn:hover { background: var(--brass); }
+.link { font-size: 14px; text-decoration: none; border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+.link:hover { border-color: var(--ink); }
+.hero-photo { margin: 0; }
+.hero-photo img { width: 100%; height: auto; aspect-ratio: 5 / 4; object-fit: cover; object-position: 50% 55%; }
+.hero-photo figcaption { margin-top: 8px; font-size: 13px; color: var(--muted); }
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; }
+}
+
+.reach { border-block: 1px solid var(--line); }
+.tags span { white-space: nowrap; }
+.reach .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 32px; padding-block: 18px; }
+
+/* Section heads */
+section { scroll-margin-top: 72px; }
+.sec { padding-block: clamp(64px, 9vw, 128px) 0; }
+.sec-head { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px 48px; align-items: end; margin-bottom: clamp(28px, 4vw, 48px); }
+.sec-head p { color: var(--muted); max-width: 46ch; justify-self: end; }
+@media (max-width: 820px) { .sec-head { grid-template-columns: 1fr; } .sec-head p { justify-self: start; } }
+
+/* Work */
+.filters { display: flex; flex-wrap: wrap; gap: 6px 24px; margin-bottom: 28px; }
+.chip {
+  font: 400 15px/1.4 var(--body); padding: 4px 0; border: 0; border-bottom: 1px solid transparent;
+  background: transparent; color: var(--muted); cursor: pointer;
+}
+.chip:hover { color: var(--ink); }
+.chip[aria-pressed="true"] { color: var(--ink); border-bottom-color: var(--ink); }
+.grid { columns: 3 280px; column-gap: clamp(8px, 1.2vw, 16px); }
+.grid figure { margin: 0 0 clamp(18px, 2vw, 26px); break-inside: avoid; }
+.grid figcaption { margin-top: 7px; font-size: 13px; color: var(--muted); }
+.grid button { all: unset; display: block; width: 100%; cursor: zoom-in; position: relative; overflow: hidden; }
+.grid button:focus-visible { outline: 2px solid var(--brass); outline-offset: 3px; }
+.grid img { width: 100%; height: auto; background: var(--line); transition: transform .6s ease, filter .6s ease; }
+.grid button:hover img { transform: scale(1.025); }
+@media (prefers-reduced-motion: reduce) { .grid img { transition: none; } .grid button:hover img { transform: none; } }
+@media (max-width: 600px) { .grid { columns: 2; } }
+
+/* Lightbox */
+dialog.lb { border: 0; padding: 0; background: transparent; max-width: 100vw; max-height: 100vh; width: 100vw; height: 100vh; }
+dialog.lb::backdrop { background: rgba(10, 11, 11, .92); }
+.lb-inner { width: 100%; height: 100%; display: grid; place-items: center; padding: 56px 16px; }
+.lb-inner img { max-height: calc(100vh - 112px); max-width: min(100%, 1400px); width: auto; object-fit: contain; }
+.lb-btn { position: fixed; background: none; border: 0; color: #fff; font: 400 14px var(--mono); letter-spacing: .1em; text-transform: uppercase; padding: 14px; cursor: pointer; opacity: .8; }
+.lb-btn:hover { opacity: 1; }
+.lb-close { top: 8px; right: 8px; }
+.lb-prev { left: 4px; top: 50%; transform: translateY(-50%); }
+.lb-next { right: 4px; top: 50%; transform: translateY(-50%); }
+.lb-count { position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.7); font: 12px var(--mono); letter-spacing: .1em; }
+
+/* In use */
+.use { background: var(--surface); border-block: 1px solid var(--line); margin-top: clamp(64px, 9vw, 128px); padding-block: clamp(64px, 9vw, 120px); }
+.use .sec { padding-top: 0; }
+.mocks { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: clamp(28px, 4vw, 48px) clamp(16px, 2.4vw, 32px); align-items: start; }
+.m-web { grid-column: span 4; }
+.m-story { grid-column: span 2; }
+.m-feed, .m-ad, .m-mail { grid-column: span 2; }
+.m-dweb { grid-column: span 4; }
+.m-poster { grid-column: span 2; }
+.poster { position: relative; aspect-ratio: 2 / 3; max-width: 340px; margin-inline: auto; background: #222 center / cover no-repeat; color: #fff; border: 1px solid var(--line); }
+.poster::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,0) 25%, rgba(0,0,0,0) 55%, rgba(0,0,0,.6)); }
+.poster .p-top { position: absolute; z-index: 1; top: 6%; left: 0; right: 0; text-align: center; font: 400 13px var(--display); letter-spacing: .32em; text-transform: uppercase; color: #fff; }
+.poster .p-bottom { position: absolute; z-index: 1; left: 8%; right: 8%; bottom: 6%; text-align: center; color: #fff; }
+.poster h3 { font-size: clamp(22px, 2.4vw, 30px); font-style: italic; color: #fff; }
+.poster .p-bottom span { display: block; margin-top: 10px; font: 11px var(--mono); letter-spacing: .12em; color: rgba(255,255,255,.85); }
+.m-list { grid-column: span 6; }
+@media (max-width: 900px) {
+  .mocks { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .m-web, .m-list { grid-column: span 2; }
+  .m-story, .m-feed, .m-ad, .m-mail, .m-poster { grid-column: span 1; }
+  .m-dweb { grid-column: span 2; }
+}
+@media (max-width: 560px) {
+  .mocks { grid-template-columns: minmax(0, 1fr); }
+  .m-web, .m-list, .m-story, .m-feed, .m-ad, .m-mail, .m-dweb, .m-poster { grid-column: span 1; }
+}
+.mock figcaption { margin-top: 14px; display: grid; gap: 4px; }
+.mock figcaption strong { font-weight: 500; font-size: 15px; }
+.mock figcaption .label { font-size: 11px; }
+.mock { margin: 0; }
+.shot { border: 1px solid var(--line); background: #fff; color: #1b1b1b; overflow: hidden; font-family: var(--body); }
+.shot * { color: inherit; }
+
+/* browser */
+.chrome { display: flex; align-items: center; gap: 10px; padding: 9px 12px; background: #f1f1ef; border-bottom: 1px solid #e2e2df; }
+.dots { display: flex; gap: 5px; }
+.dots i { width: 9px; height: 9px; border-radius: 50%; background: #d4d4d0; display: block; }
+.url { flex: 1; min-width: 0; background: #fff; border-radius: 6px; font: 11px var(--mono); color: #777 !important; padding: 5px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.web-hero { position: relative; aspect-ratio: 16 / 9; background: #333 center / cover no-repeat; color: #fff !important; }
+.web-hero::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,0) 35%, rgba(0,0,0,.5)); }
+.web-nav { position: absolute; z-index: 1; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 3% 4%; font-size: clamp(8px, 1vw, 12px); letter-spacing: .14em; text-transform: uppercase; color: #fff !important; }
+.web-nav nav { display: flex; gap: 2.2em; align-items: center; }
+.web-nav nav span { color: #fff !important; }
+.web-nav b { font-family: var(--display); font-weight: 400; font-size: 1.6em; letter-spacing: .2em; color: #fff !important; }
+.web-nav .book { border: 1px solid rgba(255,255,255,.8); padding: .7em 1.2em; }
+.web-copy { position: absolute; z-index: 1; left: 4%; bottom: 7%; right: 40%; color: #fff !important; }
+.web-copy h3 { font-size: clamp(18px, 3.2vw, 42px); color: #fff !important; }
+.web-copy p { font-size: clamp(8px, .95vw, 12px); margin-top: .8em; opacity: .9; color: #fff !important; }
+@media (max-width: 560px) { .web-nav nav span:not(.book) { display: none; } .web-copy { right: 12%; } }
+
+/* phone frames */
+.phone { max-width: 320px; margin-inline: auto; border-radius: 26px; border: 1px solid var(--line); padding: 8px; background: var(--bg); }
+.phone .shot { border-radius: 19px; border: 0; }
+.p-head { display: flex; align-items: center; gap: 8px; padding: 10px 12px; font-size: 12.5px; font-weight: 600; }
+.p-head small { display: block; font-weight: 400; color: #777 !important; font-size: 11px; }
+.avatar { width: 28px; height: 28px; border-radius: 50%; background: #1d211f; color: #fff !important; font: 400 11px var(--display); display: grid; place-items: center; flex: none; letter-spacing: .05em; }
+.p-img { width: 100%; object-fit: cover; }
+.icons { display: flex; gap: 14px; padding: 10px 12px 4px; }
+.icons svg { width: 20px; height: 20px; fill: none; stroke: #1b1b1b; stroke-width: 1.6; }
+.icons .sv { margin-left: auto; }
+.p-cap { padding: 4px 12px 14px; font-size: 12.5px; line-height: 1.45; }
+.p-cap b { font-weight: 600; }
+.ad-cta { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 12px; background: #f3f3f1; border-top: 1px solid #e6e6e3; font-size: 12.5px; font-weight: 600; }
+.ad-cta span.b { background: #1d211f; color: #fff !important; font-weight: 500; font-size: 12px; padding: 7px 12px; border-radius: 6px; white-space: nowrap; }
+
+.story { position: relative; aspect-ratio: 9 / 16; background: #222 center / cover no-repeat; color: #fff !important; }
+.story::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,0) 22%, rgba(0,0,0,0) 60%, rgba(0,0,0,.55)); }
+.bars { position: absolute; z-index: 1; top: 10px; left: 10px; right: 10px; display: flex; gap: 4px; }
+.bars i { flex: 1; height: 2px; background: rgba(255,255,255,.45); display: block; }
+.bars i:first-child { background: #fff; }
+.story .p-head { position: absolute; z-index: 1; top: 16px; left: 0; color: #fff !important; }
+.story .p-head * { color: #fff !important; }
+.story .avatar { background: #fff; color: #1d211f !important; }
+.st-text { position: absolute; z-index: 1; left: 0; right: 0; bottom: 12%; text-align: center; padding-inline: 12px; }
+.st-text h3 { font-size: 30px; font-style: italic; color: #fff !important; }
+.st-text span { display: inline-block; margin-top: 14px; background: #fff; color: #1b1b1b !important; font-size: 12px; font-weight: 600; padding: 8px 14px; border-radius: 999px; }
+
+/* email */
+.mail { max-width: 360px; margin-inline: auto; }
+.mail-top { padding: 10px 14px; border-bottom: 1px solid #eee; font-size: 11.5px; color: #666 !important; display: grid; gap: 2px; }
+.mail-top b { color: #1b1b1b !important; font-weight: 600; }
+.mail-body { padding: 18px; text-align: center; }
+.mail-body .brand { font-family: var(--display); letter-spacing: .3em; font-size: 13px; margin-bottom: 14px; }
+.mail-body img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.mail-body h3 { font-size: 22px; margin: 16px 0 8px; }
+.mail-body p { font-size: 12.5px; color: #555 !important; }
+.mail-body span.b { display: inline-block; margin-top: 14px; background: #1d211f; color: #fff !important; font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; padding: 10px 16px; }
+
+/* listing */
+.listing { padding: 16px; }
+.l-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: repeat(2, minmax(0, 1fr)); gap: 6px; height: clamp(240px, 34vw, 460px); border-radius: 10px; overflow: hidden; }
+.l-grid img { width: 100%; height: 100%; min-height: 0; object-fit: cover; }
+.l-grid img:first-child { grid-row: span 2; }
+
+.l-info { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 12px; padding-top: 14px; }
+.l-info h3 { font-family: var(--body); font-weight: 600; font-size: 17px; }
+.l-info p { font-size: 13px; color: #666 !important; }
+.l-info span.b { background: #1d211f; color: #fff !important; font-size: 13px; padding: 10px 16px; border-radius: 8px; }
+@media (max-width: 560px) { .l-grid { grid-template-columns: 1fr 1fr; grid-template-rows: minmax(0, 2fr) minmax(0, 1fr); height: 420px; } .l-grid img:first-child { grid-row: auto; grid-column: span 2; } .l-grid img:nth-child(n+4) { display: none; } }
+
+.use-note { margin-top: 36px; font-size: 13px; color: var(--muted); }
+
+/* Services */
+.svc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px clamp(32px, 6vw, 96px); align-items: start; }
+.svc-title { font-size: 13px; color: var(--muted); padding-bottom: 10px; border-bottom: 1px solid var(--ink); }
+.svc ul { list-style: none; padding: 0; margin: 0; }
+.svc li { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); font-size: 18px; }
+.svc li span:first-child { min-width: 0; }
+.svc li .label { white-space: nowrap; }
+.svc-cta { margin-top: 28px; }
+@media (max-width: 820px) { .svc { grid-template-columns: 1fr; } }
+@media (max-width: 480px) { .svc li { flex-direction: column; gap: 2px; } }
+
+/* Process */
+.steps { list-style: none; counter-reset: step; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px; border-top: 1px solid var(--ink); }
+.steps li { counter-increment: step; display: grid; gap: 8px; align-content: start; padding-top: 18px; }
+.steps li::before { content: counter(step); font: 400 30px/1 var(--display); color: var(--muted); }
+.steps strong { font-weight: 500; font-size: 17px; }
+.steps span { color: var(--muted); font-size: 15px; }
+@media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .steps { grid-template-columns: 1fr; gap: 24px; } }
+
+/* About */
+.about { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(32px, 6vw, 96px); align-items: center; }
+.about img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; }
+.about-text { display: grid; gap: 20px; max-width: 58ch; }
+.about-text h2 { margin-bottom: 8px; }
+.about-text p { font-size: 17px; }
+.about-text p + p { color: var(--muted); }
+@media (max-width: 820px) { .about { grid-template-columns: 1fr; } }
+
+/* Contact */
+.contact { padding-block: clamp(80px, 11vw, 150px); text-align: center; display: grid; justify-items: center; gap: 22px; }
+.contact h2 { font-size: clamp(38px, 5.6vw, 68px); max-width: 16ch; }
+.contact p { color: var(--muted); max-width: 52ch; }
+.contact .quote-tip { font-size: 14px; max-width: 46ch; }
+.email-row { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; margin-top: 12px; }
+.email { font: 400 clamp(20px, 2.6vw, 28px) var(--display); user-select: all; border-bottom: 1px solid var(--brass); padding-bottom: 4px; overflow-wrap: anywhere; }
+.copy { font: 500 13px var(--body); background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 9px 14px; cursor: pointer; }
+.copy:hover { border-color: var(--ink); }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-block: 24px; }
+</style>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">YNH Creative</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#work">Hotels</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#in-use">In use</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+      <a class="nav-cta" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <div>
+      <p class="label">Hospitality &amp; travel content creator</p>
+      <h1>Visual stories that fill your rooms.</h1>
+      <p class="lede">Atmospheric, social-ready photo content for boutique hotels, luxury properties and tourism boards that understand the power of a first impression.</p>
+      <div class="cta-row">
+        <a class="btn" href="#contact">Start a conversation</a>
+        <a class="link" href="#in-use">See it in use</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="img/10.jpg" alt="Courtyard sun loungers under a terracotta roof" width="1066" height="1599">
+      <figcaption>Courtyard, late afternoon</figcaption>
+    </figure>
+  </div>
+
+  <div class="reach">
+    <div class="wrap">
+      <span class="label tags"><span>Boutique hotels ·</span> <span>Luxury properties ·</span> <span>Restaurants ·</span> <span>Tourism boards</span></span>
+      <span class="label tags"><span>Europe ·</span> <span>Asia ·</span> <span>Latin America ·</span> <span>USA</span></span>
+    </div>
+  </div>
+
+  <section id="work" class="wrap sec">
+    <div class="sec-head">
+      <h2>For hotels and resorts</h2>
+      <p>Rooms, amenities, food and the moments guests remember. Tap any image to view it larger.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter photos">
+      <button class="chip" id="f-all" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" id="f-rooms" data-f="rooms" aria-pressed="false">Rooms &amp; Details</button>
+      <button class="chip" id="f-spaces" data-f="spaces" aria-pressed="false">Pools &amp; Spaces</button>
+      <button class="chip" id="f-food" data-f="food" aria-pressed="false">Food &amp; Drink</button>
+      <button class="chip" id="f-around" data-f="around" aria-pressed="false">Around the Hotel</button>
+    </div>
+    <div class="grid" id="grid-hotels">
+      <figure data-cat="rooms"><button type="button" data-full="img/10.jpg" aria-label="View larger: Courtyard sun loungers under a terracotta roof"><img src="img/10-s.jpg" alt="Courtyard sun loungers under a terracotta roof" width="600" height="900" loading="lazy"></button><figcaption>Courtyard, late afternoon</figcaption></figure>
+      <figure data-cat="rooms"><button type="button" data-full="img/15.jpg" aria-label="View larger: Marble soaking tub by a shuttered window"><img src="img/15-s.jpg" alt="Marble soaking tub by a shuttered window" width="600" height="900" loading="lazy"></button><figcaption>Marble bath, evening</figcaption></figure>
+      <figure data-cat="food"><button type="button" data-full="img/24.jpg" aria-label="View larger: Bowl of fresh fruit held over a pool"><img src="img/24-s.jpg" alt="Bowl of fresh fruit held over a pool" width="600" height="800" loading="lazy"></button><figcaption>Poolside fruit</figcaption></figure>
+      <figure data-cat="rooms"><button type="button" data-full="img/14.jpg" aria-label="View larger: Robe hanging in a softly lit wardrobe"><img src="img/14-s.jpg" alt="Robe hanging in a softly lit wardrobe" width="600" height="900" loading="lazy"></button><figcaption>Robe in the wardrobe</figcaption></figure>
+      <figure data-cat="spaces"><button type="button" data-full="img/03.jpg" aria-label="View larger: Garden pool seen from above through trees"><img src="img/03-s.jpg" alt="Garden pool seen from above through trees" width="675" height="900" loading="lazy"></button><figcaption>Garden pool from above</figcaption></figure>
+      <figure data-cat="food"><button type="button" data-full="img/23.jpg" aria-label="View larger: Iced coffee and espresso on a wooden tray"><img src="img/23-s.jpg" alt="Iced coffee and espresso on a wooden tray" width="600" height="900" loading="lazy"></button><figcaption>Coffee service</figcaption></figure>
+      <figure data-cat="rooms"><button type="button" data-full="img/06.jpg" aria-label="View larger: Welcome amenity on a side table beside an armchair"><img src="img/06-s.jpg" alt="Welcome amenity on a side table beside an armchair" width="533" height="799" loading="lazy"></button><figcaption>Welcome amenity</figcaption></figure>
+      <figure data-cat="spaces"><button type="button" data-full="img/05.jpg" aria-label="View larger: Hotel café with patterned armchairs and tall windows"><img src="img/05-s.jpg" alt="Hotel café with patterned armchairs and tall windows" width="600" height="900" loading="lazy"></button><figcaption>Lobby café</figcaption></figure>
+      <figure data-cat="spaces"><button type="button" data-full="img/k1753.jpg" aria-label="View larger: Glass pendant lights in the lobby restaurant"><img src="img/k1753-s.jpg" alt="Glass pendant lights in the lobby restaurant" width="600" height="900" loading="lazy"></button><figcaption>Pendant lights, lobby restaurant</figcaption></figure>
+      <figure data-cat="food"><button type="button" data-full="img/27.jpg" aria-label="View larger: Two cups of gelato held up at night"><img src="img/27-s.jpg" alt="Two cups of gelato held up at night" width="600" height="900" loading="lazy"></button><figcaption>Gelato after dark</figcaption></figure>
+      <figure data-cat="food"><button type="button" data-full="img/k1815.jpg" aria-label="View larger: Back bar with bottles and warm shelf lighting"><img src="img/k1815-s.jpg" alt="Back bar with bottles and warm shelf lighting" width="900" height="600" loading="lazy"></button><figcaption>Hotel bar</figcaption></figure>
+      <figure data-cat="rooms"><button type="button" data-full="img/09.jpg" aria-label="View larger: White bed with monogrammed pillows"><img src="img/09-s.jpg" alt="White bed with monogrammed pillows" width="600" height="900" loading="lazy"></button><figcaption>Guest room</figcaption></figure>
+      <figure data-cat="spaces"><button type="button" data-full="img/08.jpg" aria-label="View larger: Pool surrounded by palms and garden"><img src="img/08-s.jpg" alt="Pool surrounded by palms and garden" width="533" height="799" loading="lazy"></button><figcaption>Pool garden</figcaption></figure>
+      <figure data-cat="spaces"><button type="button" data-full="img/22.jpg" aria-label="View larger: Tiled courtyard with arched colonnade"><img src="img/22-s.jpg" alt="Tiled courtyard with arched colonnade" width="533" height="799" loading="lazy"></button><figcaption>Tiled courtyard</figcaption></figure>
+      <figure data-cat="spaces"><button type="button" data-full="img/k1838.jpg" aria-label="View larger: Lounge with globe pendants and channel-tufted walls"><img src="img/k1838-s.jpg" alt="Lounge with globe pendants and channel-tufted walls" width="600" height="900" loading="lazy"></button><figcaption>Hotel lounge</figcaption></figure>
+      <figure data-cat="food"><button type="button" data-full="img/26.jpg" aria-label="View larger: Latte and matcha on a sunny café table"><img src="img/26-s.jpg" alt="Latte and matcha on a sunny café table" width="600" height="800" loading="lazy"></button><figcaption>Latte and matcha</figcaption></figure>
+      <figure data-cat="food"><button type="button" data-full="img/02.jpg" aria-label="View larger: Trays of custard tarts in a bakery case"><img src="img/02-s.jpg" alt="Trays of custard tarts in a bakery case" width="900" height="600" loading="lazy"></button><figcaption>Custard tarts</figcaption></figure>
+      <figure data-cat="around"><button type="button" data-full="img/01.jpg" aria-label="View larger: Café steps with yellow umbrellas"><img src="img/01-s.jpg" alt="Café steps with yellow umbrellas" width="600" height="900" loading="lazy"></button><figcaption>Café steps</figcaption></figure>
+    </div>
+  </section>
+
+  <section id="destinations" class="wrap sec">
+    <div class="sec-head">
+      <h2>For tourism boards</h2>
+      <p>Streets, landmarks, culture and local food. The kind of images that make people plan a trip.</p>
+    </div>
+    <div class="filters" role="group" aria-label="Filter destination photos">
+      <button class="chip" id="d-all" data-f="all" aria-pressed="true">All</button>
+      <button class="chip" id="d-streets" data-f="streets" aria-pressed="false">Streets &amp; Local Life</button>
+      <button class="chip" id="d-landmarks" data-f="landmarks" aria-pressed="false">Landmarks &amp; Views</button>
+      <button class="chip" id="d-culture" data-f="culture" aria-pressed="false">Culture &amp; Tradition</button>
+      <button class="chip" id="d-flavors" data-f="flavors" aria-pressed="false">Local Flavors</button>
+    </div>
+    <div class="grid" id="grid-dest">
+      <figure data-cat="streets"><button type="button" data-full="img/00.jpg" aria-label="View larger: Red vintage tram on a sunny street"><img src="img/00-s.jpg" alt="Red vintage tram on a sunny street" width="600" height="900" loading="lazy"></button><figcaption>Morning tram</figcaption></figure>
+      <figure data-cat="landmarks"><button type="button" data-full="img/d2600.jpg" aria-label="View larger: Lit stone bridge with a moon gate reflected in the canal at night"><img src="img/d2600-s.jpg" alt="Lit stone bridge with a moon gate reflected in the canal at night" width="600" height="900" loading="lazy"></button><figcaption>Moon gate bridge at night</figcaption></figure>
+      <figure data-cat="streets"><button type="button" data-full="img/d1422.jpg" aria-label="View larger: Market stall piled with fruit under a red awning"><img src="img/d1422-s.jpg" alt="Market stall piled with fruit under a red awning" width="600" height="900" loading="lazy"></button><figcaption>Market stall</figcaption></figure>
+      <figure data-cat="culture"><button type="button" data-full="img/21.jpg" aria-label="View larger: Red wishing ribbons hung on a wall"><img src="img/21-s.jpg" alt="Red wishing ribbons hung on a wall" width="600" height="900" loading="lazy"></button><figcaption>Wishing ribbons</figcaption></figure>
+      <figure data-cat="landmarks"><button type="button" data-full="img/d2208.jpg" aria-label="View larger: City skyline and harbor seen from the Peak"><img src="img/d2208-s.jpg" alt="City skyline and harbor seen from the Peak" width="600" height="900" loading="lazy"></button><figcaption>View from the Peak</figcaption></figure>
+      <figure data-cat="flavors"><button type="button" data-full="img/02.jpg" aria-label="View larger: Trays of custard tarts in a bakery case"><img src="img/02-s.jpg" alt="Trays of custard tarts in a bakery case" width="900" height="600" loading="lazy"></button><figcaption>Custard tarts</figcaption></figure>
+      <figure data-cat="streets"><button type="button" data-full="img/17.jpg" aria-label="View larger: Busy café terrace under flowering balconies"><img src="img/17-s.jpg" alt="Busy café terrace under flowering balconies" width="900" height="600" loading="lazy"></button><figcaption>Café terrace</figcaption></figure>
+      <figure data-cat="culture"><button type="button" data-full="img/d2543.jpg" aria-label="View larger: Temple courtyard with carved doors and stone path"><img src="img/d2543-s.jpg" alt="Temple courtyard with carved doors and stone path" width="600" height="900" loading="lazy"></button><figcaption>Temple courtyard</figcaption></figure>
+      <figure data-cat="landmarks"><button type="button" data-full="img/29.jpg" aria-label="View larger: Eiffel Tower lit up at dusk"><img src="img/29-s.jpg" alt="Eiffel Tower lit up at dusk" width="600" height="900" loading="lazy"></button><figcaption>Eiffel Tower at dusk</figcaption></figure>
+      <figure data-cat="landmarks"><button type="button" data-full="img/d2632.jpg" aria-label="View larger: Terraced tower with hanging gardens lit at night"><img src="img/d2632-s.jpg" alt="Terraced tower with hanging gardens lit at night" width="600" height="900" loading="lazy"></button><figcaption>Garden tower after dark</figcaption></figure>
+      <figure data-cat="streets"><button type="button" data-full="img/d2407.jpg" aria-label="View larger: Tea shop entrance with a hanging noren curtain"><img src="img/d2407-s.jpg" alt="Tea shop entrance with a hanging noren curtain" width="600" height="900" loading="lazy"></button><figcaption>Tea shop</figcaption></figure>
+      <figure data-cat="streets"><button type="button" data-full="img/d2506.jpg" aria-label="View larger: Scooters crossing a busy city intersection"><img src="img/d2506-s.jpg" alt="Scooters crossing a busy city intersection" width="600" height="900" loading="lazy"></button><figcaption>Midday traffic</figcaption></figure>
+      <figure data-cat="culture"><button type="button" data-full="img/28.jpg" aria-label="View larger: Traditional pagoda roofs lit at night"><img src="img/28-s.jpg" alt="Traditional pagoda roofs lit at night" width="600" height="900" loading="lazy"></button><figcaption>Pagoda at night</figcaption></figure>
+      <figure data-cat="landmarks"><button type="button" data-full="img/30.jpg" aria-label="View larger: City skyline and double-decker buses at night"><img src="img/30-s.jpg" alt="City skyline and double-decker buses at night" width="600" height="900" loading="lazy"></button><figcaption>City at night</figcaption></figure>
+      <figure data-cat="flavors"><button type="button" data-full="img/25.jpg" aria-label="View larger: Tacos served on wooden boards"><img src="img/25-s.jpg" alt="Tacos served on wooden boards" width="675" height="900" loading="lazy"></button><figcaption>Tacos to share</figcaption></figure>
+      <figure data-cat="culture"><button type="button" data-full="img/d2503.jpg" aria-label="View larger: Koi fish in a sunlit pond"><img src="img/d2503-s.jpg" alt="Koi fish in a sunlit pond" width="600" height="900" loading="lazy"></button><figcaption>Koi pond</figcaption></figure>
+      <figure data-cat="streets"><button type="button" data-full="img/01.jpg" aria-label="View larger: Café steps with yellow umbrellas"><img src="img/01-s.jpg" alt="Café steps with yellow umbrellas" width="600" height="900" loading="lazy"></button><figcaption>Café steps</figcaption></figure>
+      <figure data-cat="culture"><button type="button" data-full="img/31.jpg" aria-label="View larger: Glowing paper lanterns in a tree"><img src="img/31-s.jpg" alt="Glowing paper lanterns in a tree" width="600" height="900" loading="lazy"></button><figcaption>Paper lanterns</figcaption></figure>
+      <figure data-cat="flavors"><button type="button" data-full="img/d1537.jpg" aria-label="View larger: Apples and oranges stacked at a market"><img src="img/d1537-s.jpg" alt="Apples and oranges stacked at a market" width="900" height="600" loading="lazy"></button><figcaption>Fruit market</figcaption></figure>
+    </div>
+  </section>
+
+  <div class="use" id="in-use">
+    <section class="wrap sec">
+      <div class="sec-head">
+        <h2>Where the photos go</h2>
+        <p>Every project includes organic use on your own channels: your website, organic social and email. Licensing for paid ads, print and out-of-home is available when you need it. Here is what a single shoot can look like across them.</p>
+      </div>
+
+      <div class="mocks">
+        <figure class="mock m-web">
+          <div class="shot">
+            <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url">yourhotel.com</span></div>
+            <div class="web-hero" style="background-image:url(img/10.jpg)">
+              <div class="web-nav"><b>YOUR HOTEL</b><nav><span>Rooms</span><span>Dining</span><span>Offers</span><span class="book">Book</span></nav></div>
+              <div class="web-copy"><h3>Slow mornings in the courtyard.</h3><p>Sun loungers, shade and nowhere to be.</p></div>
+            </div>
+          </div>
+          <figcaption><strong>Website homepage</strong><span class="label">Hero banner · 16:9 · 2400 px wide</span></figcaption>
+        </figure>
+
+        <figure class="mock m-story">
+          <div class="phone"><div class="shot">
+            <div class="story" style="background-image:url(img/27.jpg)">
+              <div class="bars"><i></i><i></i><i></i></div>
+              <div class="p-head"><span class="avatar">YH</span><span>yourhotel<small>Tonight</small></span></div>
+              <div class="st-text"><h3>Dessert on the terrace</h3><span>Reserve a table</span></div>
+            </div>
+          </div></div>
+          <figcaption><strong>Stories</strong><span class="label">Vertical · 9:16 · 1080 × 1920</span></figcaption>
+        </figure>
+
+        <figure class="mock m-feed">
+          <div class="phone"><div class="shot">
+            <div class="p-head"><span class="avatar">YH</span><span>yourhotel<small>Garden Suite</small></span></div>
+            <img class="p-img" src="img/15-s.jpg" alt="Marble soaking tub by a shuttered window" style="aspect-ratio:4/5">
+            <div class="icons" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 1 3.3 6.5L4 20l1.2-3.4A8 8 0 0 1 4 12z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M21 3 3 10.5l7 2.5 2.5 7z"/></svg>
+              <svg class="sv" viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4.5L6 21z"/></svg>
+            </div>
+            <p class="p-cap"><b>yourhotel</b> Sunday plans: a long soak and a late checkout.</p>
+          </div></div>
+          <figcaption><strong>Social feed post</strong><span class="label">Portrait · 4:5 · 1080 × 1350</span></figcaption>
+        </figure>
+
+        <figure class="mock m-ad">
+          <div class="phone"><div class="shot">
+            <div class="p-head"><span class="avatar">YH</span><span>yourhotel<small>Sponsored</small></span></div>
+            <img class="p-img" src="img/24-s.jpg" alt="Bowl of fresh fruit held over a pool" style="aspect-ratio:1/1">
+            <div class="ad-cta"><span>Weekend escape, breakfast included</span><span class="b">Book now</span></div>
+            <p class="p-cap" style="padding-top:10px">Two nights by the pool. Fresh fruit, slow mornings and a room with a view.</p>
+          </div></div>
+          <figcaption><strong>Paid social ad</strong><span class="label">Square · 1:1 · 1080 × 1080</span></figcaption>
+        </figure>
+
+        <figure class="mock m-mail">
+          <div class="shot mail">
+            <div class="mail-top"><b>Your Hotel</b><span>Breakfast is on us this weekend</span></div>
+            <div class="mail-body">
+              <div class="brand">YOUR HOTEL</div>
+              <img src="img/23-mail.jpg" alt="Iced coffee and espresso on a wooden tray" style="aspect-ratio:1/1">
+              <h3>Breakfast is on us</h3>
+              <p>Book two nights this month and start every morning in the café, coffee included.</p>
+              <span class="b">Claim the offer</span>
+            </div>
+          </div>
+          <figcaption><strong>Email newsletter</strong><span class="label">Header image · 600 px wide</span></figcaption>
+        </figure>
+
+        <figure class="mock m-dweb">
+          <div class="shot">
+            <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url">visityourcity.com</span></div>
+            <div class="web-hero" style="background-image:url(img/d2208.jpg);background-position:50% 40%">
+              <div class="web-nav"><b>VISIT YOUR CITY</b><nav><span>See</span><span>Eat</span><span>Stay</span><span class="book">Plan a trip</span></nav></div>
+              <div class="web-copy"><h3>The whole city, from above.</h3><p>Your guide to the views, the food and the neighborhoods.</p></div>
+            </div>
+          </div>
+          <figcaption><strong>Tourism board website</strong><span class="label">Destination hero · 16:9 · 2400 px wide</span></figcaption>
+        </figure>
+
+        <figure class="mock m-poster">
+          <div class="poster" style="background-image:url(img/d2600.jpg)">
+            <span class="p-top">Visit Your City</span>
+            <div class="p-bottom"><h3>After dark, the river comes alive.</h3><span>visityourcity.com</span></div>
+          </div>
+          <figcaption><strong>Campaign poster</strong><span class="label">Transit &amp; print · 2:3 · print-ready</span></figcaption>
+        </figure>
+      </div>
+      <p class="use-note">Layouts are examples. "Your Hotel" and "Your City" stand in for your property or destination.</p>
+    </section>
+  </div>
+
+  <section id="services" class="wrap sec">
+    <div class="sec-head">
+      <h2>Services</h2>
+      <p>Every project is custom. Tell me about your property or destination and I'll put together a shot list and quote.</p>
+    </div>
+    <div class="svc">
+      <div>
+        <p class="svc-title">What I create</p>
+        <ul>
+          <li><span>Rooms &amp; suites</span><span class="label">Hotels</span></li>
+          <li><span>Pools, lobbies &amp; common spaces</span><span class="label">Hotels</span></li>
+          <li><span>Food, drink &amp; amenity details</span><span class="label">Hotels &amp; restaurants</span></li>
+          <li><span>Streets, landmarks &amp; local life</span><span class="label">Tourism boards</span></li>
+          <li><span>Culture, traditions &amp; local food</span><span class="label">Tourism boards</span></li>
+        </ul>
+      </div>
+      <div>
+        <p class="svc-title">Delivery &amp; licensing</p>
+        <ul>
+          <li><span>High-res, edited photos</span><span class="label">Included</span></li>
+          <li><span>Website, organic social &amp; email use</span><span class="label">Included</span></li>
+          <li><span>Paid ads, print &amp; out-of-home</span><span class="label">Add-on</span></li>
+        </ul>
+        <p class="svc-cta"><a class="btn" href="#contact">Get in touch</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="process" class="wrap sec">
+    <div class="sec-head">
+      <h2>How it works</h2>
+      <p>Simple from first email to final files.</p>
+    </div>
+    <ol class="steps">
+      <li><strong>Tell me what you need</strong><span>Your property or destination, the dates, and where the photos will be used.</span></li>
+      <li><strong>Shot list and quote</strong><span>I plan the shots around your spaces, your light and your goals, and send a clear quote.</span></li>
+      <li><strong>The shoot</strong><span>We schedule it around your guests, staff and the best light.</span></li>
+      <li><strong>Edited photos, ready to use</strong><span>High-res files delivered digitally, with usage terms in writing.</span></li>
+    </ol>
+  </section>
+
+  <section id="about" class="wrap sec">
+    <div class="about">
+      <img src="img/22.jpg" alt="Tiled courtyard with arched colonnade and a potted fern" width="533" height="799">
+      <div class="about-text">
+        <p class="label">About</p>
+        <h2>Capturing the atmosphere behind every space</h2>
+        <p>You've put care into every detail of your space: the light, the textures, the experience guests remember. I help you bring that same feeling to life online through imagery that inspires bookings and builds connection.</p>
+        <p>I'm Sonia, the content creator behind YNH Creative. With a background in brand marketing, I understand how visuals shape perception and drive emotion. I create clean, atmospheric photo content that shows what makes a property, or a whole place, worth the trip.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="wrap contact">
+    <p class="label">Let's work together</p>
+    <h2>Have a property or place to shoot?</h2>
+    <p>Whether you're launching a new property, promoting a destination, or building a content library, let's create something that makes people want to go.</p>
+    <p class="quote-tip">For a faster quote, include your property or destination, location, dates, and where you plan to use the photos.</p>
+    <div class="email-row">
+      <a class="email" href="mailto:ynhcreativelab@gmail.com?subject=Let's%20work%20together">ynhcreativelab@gmail.com</a>
+      <button class="copy" id="copy" type="button">Copy email</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="label">YNH Creative · Southern California</span>
+    <span class="label">Photo content for hospitality &amp; travel</span>
+  </div>
+</footer>
+
+<dialog class="lb" id="lb" aria-label="Photo viewer">
+  <div class="lb-inner"><img id="lb-img" alt=""></div>
+  <button class="lb-btn lb-close" id="lb-close" type="button">Close</button>
+  <button class="lb-btn lb-prev" id="lb-prev" type="button" aria-label="Previous photo">Prev</button>
+  <button class="lb-btn lb-next" id="lb-next" type="button" aria-label="Next photo">Next</button>
+  <span class="lb-count" id="lb-count"></span>
+</dialog>
+
+<script>
+(function () {
+  document.querySelectorAll('.filters').forEach(function (group) {
+    var grid = group.nextElementSibling;
+    var figs = grid.querySelectorAll('figure');
+    var chips = group.querySelectorAll('.chip');
+    chips.forEach(function (c) {
+      c.addEventListener('click', function () {
+        var f = c.getAttribute('data-f');
+        chips.forEach(function (x) { x.setAttribute('aria-pressed', x === c ? 'true' : 'false'); });
+        figs.forEach(function (fig) { fig.hidden = !(f === 'all' || fig.getAttribute('data-cat') === f); });
+      });
+    });
+  });
+
+  var lb = document.getElementById('lb'), img = document.getElementById('lb-img'), count = document.getElementById('lb-count');
+  var list = [], idx = 0;
+  function show() {
+    var b = list[idx];
+    img.src = b.getAttribute('data-full');
+    img.alt = b.querySelector('img').alt;
+    count.textContent = (idx + 1) + ' / ' + list.length;
+  }
+  function step(d) { idx = (idx + d + list.length) % list.length; show(); }
+  document.querySelectorAll('.grid').forEach(function (grid) { grid.addEventListener('click', function (e) {
+    var b = e.target.closest('button'); if (!b) return;
+    var figs = Array.prototype.slice.call(grid.querySelectorAll('figure'));
+    list = figs.filter(function (f) { return !f.hidden; }).map(function (f) { return f.querySelector('button'); });
+    idx = list.indexOf(b); show();
+    if (lb.showModal) lb.showModal(); else lb.setAttribute('open', '');
+  }); });
+  document.getElementById('lb-close').onclick = function () { lb.close(); };
+  document.getElementById('lb-prev').onclick = function () { step(-1); };
+  document.getElementById('lb-next').onclick = function () { step(1); };
+  lb.addEventListener('click', function (e) { if (e.target === lb || e.target.classList.contains('lb-inner')) lb.close(); });
+  document.addEventListener('keydown', function (e) {
+    if (!lb.open) return;
+    if (e.key === 'ArrowRight') step(1);
+    if (e.key === 'ArrowLeft') step(-1);
+  });
+
+  var copy = document.getElementById('copy');
+  copy.addEventListener('click', function () {
+    var done = function () { copy.textContent = 'Copied'; setTimeout(function () { copy.textContent = 'Copy email'; }, 1800); };
+    try {
+      navigator.clipboard.writeText('ynhcreativelab@gmail.com').then(done, function () { selectEmail(); });
+    } catch (err) { selectEmail(); }
+  });
+  function selectEmail() {
+    var r = document.createRange(); r.selectNodeContents(document.querySelector('.email'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    copy.textContent = 'Selected, press copy';
+  }
+})();
+</script>
+
+
+</body>
+</html>
