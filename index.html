@@ -75,7 +75,16 @@ p { margin: 0; }
 .nav { display: flex; gap: clamp(14px, 2.4vw, 32px); flex-wrap: wrap; justify-content: flex-end; }
 .nav a { font-size: 14px; text-decoration: none; color: var(--muted); }
 .nav a:hover { color: var(--ink); }
-@media (max-width: 560px) { .nav a:not(.nav-cta) { display: none; } }
+.top-cta { display: none; }
+@media (max-width: 560px) {
+  .top .wrap { flex-wrap: wrap; row-gap: 10px; padding-block: 12px 0; }
+  .top-cta { display: inline; font-size: 14px; text-decoration: none; }
+  .nav { order: 3; width: 100%; flex-wrap: nowrap; justify-content: flex-start; gap: 20px; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; padding-bottom: 12px; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { white-space: nowrap; }
+  .nav .nav-cta { display: none; }
+  section { scroll-margin-top: 108px; }
+}
 .nav-cta { color: var(--ink) !important; border-bottom: 1px solid var(--brass); }
 
 /* Hero */
@@ -285,6 +294,7 @@ footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; g
 <header class="top">
   <div class="wrap">
     <a class="mark" href="#top">YNH Creative</a>
+    <a class="nav-cta top-cta" href="#contact">Contact</a>
     <nav class="nav" aria-label="Main">
       <a href="#work">Hotels</a>
       <a href="#destinations">Destinations</a>
